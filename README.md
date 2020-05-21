@@ -2,6 +2,9 @@
 
 Handy when you want to keep tests synchronous.
 
+[![Clojars Project](https://img.shields.io/clojars/v/cljs-synchronous-promise.svg)](https://clojars.org/cljs-synchronous-promise)
+
+
 ## Usage 
 
 Fake the sources of your js/Promises (e.g. http calls) to return sync promises
