@@ -4,7 +4,7 @@ Handy when you want to keep tests synchronous.
 
 [![Clojars Project](https://img.shields.io/clojars/v/cljs-synchronous-promise.svg)](https://clojars.org/cljs-synchronous-promise)
 
-
+this is only a partial impl atm. There's [this pure js one](https://github.com/fluffynuts/synchronous-promise#readme) if you need more
 ## Usage 
 
 Fake the sources of your js/Promises (e.g. http calls) to return sync promises
