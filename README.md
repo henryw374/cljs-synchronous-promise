@@ -24,5 +24,6 @@ Fake the sources of your js/Promises (e.g. http calls) to return sync promises
 
 see the test nss for more examples 
 
+### [license](./LICENSE)
 
-U+00A9 2020 Widd Industries Ltd 
+Copyright © 2020 Widd Industries Ltd 

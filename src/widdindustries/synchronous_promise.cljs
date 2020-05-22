@@ -1,6 +1,5 @@
 (ns widdindustries.synchronous-promise)
 
-
 (deftype SyncPromise [ok? v]
   ; https://github.com/clojure/clojurescript/wiki/Working-with-Javascript-classes
   Object
@@ -20,17 +19,3 @@
 
 (defn rejected [v]
   (SyncPromise. false v))
-
-#_(defn resolve [v]
-    #js{:then (fn [f]
-                (try (resolve (f v))
-                     (catch js/Error e
-                       (reject e)))
-                )
-        :catch (fn [_]
-                 (resolve v))})
-
-#_(defn reject [ex]
-    #js{:catch (fn [f]
-                 (resolve (f ex)))
-        :then (fn [_] (reject ex))})
