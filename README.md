@@ -2,7 +2,7 @@
 
 Handy when you want to keep tests synchronous.
 
-[![Clojars Project](https://img.shields.io/clojars/v/com.widdindustries/cljs-synchronous-promise.svg)]
+[![Clojars Project](https://img.shields.io/clojars/v/com.widdindustries/cljs-synchronous-promise.svg)](https://clojars.org/com.widdindustries/cljs-synchronous-promise)
 
 this is only a partial impl atm. There's [this pure js one](https://github.com/fluffynuts/synchronous-promise#readme) if you need more
 ## Usage 
