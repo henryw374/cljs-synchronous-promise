@@ -2,6 +2,8 @@
 
 (deftype SyncPromise [ok? v]
   ; https://github.com/clojure/clojurescript/wiki/Working-with-Javascript-classes
+  IDeref
+  (-deref [_] v)
   Object
   (then [_ f]
     (if ok?

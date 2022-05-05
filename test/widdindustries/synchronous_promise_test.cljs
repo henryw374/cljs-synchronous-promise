@@ -6,8 +6,7 @@
 
 
 
-(comment 
-  
+(comment
   (-> (sut/resolved :val)
       (.then (fn [v] [v]))
       (.catch (fn [_] (throw (js/Error. "never called"))))
@@ -29,4 +28,6 @@
   (-> (sut/resolved :val)
       (p/then (fn [v] (js/console.log "hello " v ))))
   
+  (is "foo" @(sut/resolved "foo"))
+  (-> (sut/resolved "foo") deref)
   )
