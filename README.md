@@ -10,7 +10,7 @@ this is only a partial impl atm. There's [this pure js one](https://github.com/f
 Fake the sources of your js/Promises (e.g. http calls) to return sync promises
 
 ```
-(require '[widdindustries.synchronous-promise :as sp])
+(require '[com.widdindustries.synchronous-promise :as sp])
 
 (-> (sp/resolved :val)
       (.then (fn [v] [v]))

@@ -1,6 +1,6 @@
-(ns widdindustries.synchronous-promise-test
+(ns com.widdindustries.synchronous-promise-test
   (:require [clojure.test :refer [deftest testing is]]
-            [widdindustries.synchronous-promise :as sut]
+            [com.widdindustries.synchronous-promise :as sut]
             [promesa.core :as p]
             [promesa.impl :as pi]))
 
