@@ -4,6 +4,9 @@
             [promesa.core :as p]
             [promesa.impl :as pi]))
 
+(pi/extend-promise! sut/SyncPromise)
+(set! pi/*default-promise* sut/SyncPromise)
+
 (deftest prom-test
   (testing "resolved + deref"
     (is (= "foo" @(sut/resolved "foo"))))
@@ -32,8 +35,13 @@
                 deref)))
       (is (nil? @signal))))
   (testing "works with promesa"
-    (pi/extend-promise! sut/SyncPromise)
     (is (= [:val]
           (-> (sut/resolved :val)
               (p/then (fn [v] [v]))
-              deref)))))
+              deref)))
+    (testing "all promise"
+      (testing "resolved"
+        (is (= [:a :b] @(p/all [(sut/resolved :a) (sut/resolved :b)]))))
+      (testing "rejected"
+        (let [e (js/Error "foo")]
+          (is (= e @(p/all [(p/resolved :a) (p/rejected e) (p/rejected (js/Error "bar")) (p/resolved :b)]))))))))
