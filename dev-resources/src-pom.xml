@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.widdindustries</groupId>
-  <artifactId>cljs-synchronous-promise</artifactId>
-  <version>0.2.0</version>
-  <name>cljs-synchronous-promise</name>
+    <organization>
+        <name>Widd Industries Ltd</name>
+        <url>http://widdindustries.com</url>
+    </organization>
+    <description>Handy when you want to keep tests synchronous.</description>
     <url>https://github.com/henryw374/cljs-synchronous-promise</url>
+    <licenses>
+        <license>
+            <url>http://opensource.org/licenses/MIT</url>
+            <name>MIT</name>
+            <comments/>
+        </license>
+    </licenses>
+    <packaging>jar</packaging>
     <scm>
-        <url>https://github.com/henryw374/cljs-synchronous-promise</url>
-    </scm>
-    <dependencies>
-    </dependencies>
-    <build>
-        <resources>
-            <resource>
-                <directory>src</directory>
-            </resource>
-            <resource>
-                <directory>resources</directory>
-            </resource>
-        </resources>
-
-    </build>
+    <url>https://github.com/henryw374/cljs-synchronous-promise</url>
+    <connection>scm:git:git@github.com:henryw374/cljs-synchronous-promise.git</connection>
+    <developerConnection>scm:git:git@github.com:henryw374/cljs-synchronous-promise.git</developerConnection>
+  </scm>
     <distributionManagement>
         <repository>
             <id>clojars</id>

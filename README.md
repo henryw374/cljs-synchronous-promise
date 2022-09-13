@@ -19,6 +19,7 @@ Fake the sources of your js/Promises (e.g. http calls) to return sync promises
 
 ; make it work with promesa fns
 (promesa.impl/extend-promise! sp/SyncPromise) 
+(set! promesa.impl/*default-promise* sp/SyncPromise)
 
 ```
 
